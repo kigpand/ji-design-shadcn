@@ -7,8 +7,8 @@ import { buttonVariants } from "./variants";
 
 export function Button({
   className,
-  variant,
-  size,
+  variant = "default",
+  size = "default",
   asChild = false,
   ...props
 }: React.ComponentProps<"button"> &
