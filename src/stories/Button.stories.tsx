@@ -1,5 +1,7 @@
 import { Button } from "@/components";
 import type { Meta, StoryObj } from "@storybook/react";
+import { within, userEvent } from "@storybook/testing-library";
+import { expect } from "@storybook/jest";
 
 const meta: Meta<typeof Button> = {
   title: "Components/Button",
@@ -35,6 +37,15 @@ export const Default: Story = {
     children: "Button",
     variant: "default",
     size: "default",
+  },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+
+    const button = canvas.getByRole("button", { name: "Button" });
+
+    await userEvent.click(button);
+
+    expect(button).toBeInTheDocument();
   },
 };
 
