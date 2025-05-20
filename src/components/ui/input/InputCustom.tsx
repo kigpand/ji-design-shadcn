@@ -1,5 +1,5 @@
 import { Input } from "./Input";
-import { cn } from "@/lib/utils";
+import { cn } from "../../../lib/utils";
 import { Slot } from "@radix-ui/react-slot";
 import { Label } from "../label";
 
