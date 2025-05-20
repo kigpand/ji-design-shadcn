@@ -3,6 +3,18 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "main": "dist/ji-design-shadcn.umd.js",
+  "module": "dist/ji-design-shadcn.es.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/ji-design-shadcn.es.js",
+      "require": "./dist/ji-design-shadcn.umd.js"
+    }
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
