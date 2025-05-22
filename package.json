@@ -1,10 +1,10 @@
 {
   "name": "ji-design-shadcn",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "type": "module",
   "main": "dist/ji-design-shadcn.umd.js",
   "module": "dist/ji-design-shadcn.es.js",
-  "types": "dist/index.d.ts",
+  "types": "dist/components/index.d.ts",
   "files": [
     "dist"
   ],
