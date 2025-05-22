@@ -4,7 +4,15 @@ import path from "path";
 import dts from "vite-plugin-dts";
 
 export default defineConfig({
-  plugins: [react(), dts({ outDir: "dist", include: ["src"] })],
+  plugins: [
+    react(),
+    dts({
+      include: ["src"],
+      outDir: "dist", // 꼭 dist로 설정!
+      copyDtsFiles: true,
+      exclude: ["src/stories", "src/**/*.stories.tsx"],
+    }),
+  ],
   build: {
     lib: {
       entry: path.resolve(__dirname, "src/components/index.ts"),
@@ -13,8 +21,8 @@ export default defineConfig({
     },
     rollupOptions: {
       external: ["react", "react-dom", "tailwindcss"],
+      input: path.resolve(__dirname, "src/components/index.ts"),
     },
-    cssCodeSplit: false,
     outDir: "dist",
   },
 });

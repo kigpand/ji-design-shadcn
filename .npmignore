@@ -8,3 +8,7 @@ package.json
 stories/
 lib/
 node_modules
+
+/src/stories
+/src/**/*.stories.*
+/src/**/*.test.*
