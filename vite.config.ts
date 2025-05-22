@@ -10,7 +10,7 @@ export default defineConfig({
       include: ["src"],
       outDir: "dist", // 꼭 dist로 설정!
       copyDtsFiles: true,
-      exclude: ["src/stories", "src/**/*.stories.tsx"],
+      exclude: ["src/stories", "src/**/*.stories.tsx", "src/lib"],
     }),
   ],
   build: {
