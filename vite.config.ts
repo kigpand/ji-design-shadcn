@@ -8,7 +8,7 @@ export default defineConfig({
     react(),
     dts({
       include: ["src"],
-      outDir: "dist", // 꼭 dist로 설정!
+      outDir: "dist",
       copyDtsFiles: true,
       exclude: ["src/stories", "src/**/*.stories.tsx", "src/lib"],
     }),
@@ -19,12 +19,12 @@ export default defineConfig({
       name: "jiDesignSystem",
       fileName: (format) => `ji-design-shadcn.${format}.js`,
     },
-    rollupOptions: {
-      external: ["react", "react-dom", "tailwindcss"],
-      input: path.resolve(__dirname, "src/components/index.ts"),
-    },
     outDir: "dist",
     sourcemap: true,
+    rollupOptions: {
+      external: ["react", "react-dom", "tailwindcss"], // ✅ 올바른 위치
+      input: path.resolve(__dirname, "src/index.ts"),
+    },
   },
   optimizeDeps: {
     exclude: ["react", "react-dom"],
