@@ -1,3 +1,5 @@
 import "./index.css";
 
-export * from "./components";
+export { Button } from "./components/ui/button/button";
+
+export { Input } from "./components/ui/input/Input";
