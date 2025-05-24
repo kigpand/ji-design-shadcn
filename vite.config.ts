@@ -15,7 +15,7 @@ export default defineConfig({
   ],
   build: {
     lib: {
-      entry: path.resolve(__dirname, "src/components/index.ts"),
+      entry: path.resolve(__dirname, "src/index.ts"),
       name: "jiDesignSystem",
       fileName: (format) => `ji-design-shadcn.${format}.js`,
     },
