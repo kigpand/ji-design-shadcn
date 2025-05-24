@@ -24,5 +24,12 @@ export default defineConfig({
       input: path.resolve(__dirname, "src/components/index.ts"),
     },
     outDir: "dist",
+    sourcemap: true,
+  },
+  optimizeDeps: {
+    exclude: ["react", "react-dom"],
+  },
+  ssr: {
+    external: ["react", "react-dom"],
   },
 });

@@ -1,6 +1,6 @@
 {
   "name": "ji-design-shadcn",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "type": "module",
   "main": "dist/ji-design-shadcn.umd.js",
   "module": "dist/ji-design-shadcn.es.js",
@@ -11,8 +11,7 @@
   "exports": {
     ".": {
       "import": "./dist/ji-design-shadcn.es.js",
-      "require": "./dist/ji-design-shadcn.umd.js",
-      "types": "./dist/components/index.d.ts"
+      "require": "./dist/ji-design-shadcn.umd.js"
     }
   },
   "scripts": {
@@ -62,6 +61,7 @@
     "typescript": "~5.7.2",
     "typescript-eslint": "^8.24.1",
     "vite": "^6.2.0",
+    "vite-plugin-dts": "^4.5.4",
     "vitest": "^3.1.1"
   },
   "peerDependencies": {
